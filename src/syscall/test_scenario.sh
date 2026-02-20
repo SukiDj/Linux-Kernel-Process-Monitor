@@ -5,7 +5,6 @@ echo "--- POKRECEM 3 PROCESA KOJI KORISTE ISTI FAJL ---"
 
 tail -f $TARGET > /dev/null &
 PID1=$!
-
 echo "Pokrenut proces 1 (PID: $PID1)"
 
 tail -f $TARGET > /dev/null &
@@ -20,7 +19,7 @@ echo "Pokrenut proces 3 (PID: $PID3) - simulira dugo citanje"
 sleep 1
 
 echo "--- POZIVAM SISTEMSKI POZIV ---"
-./test_app
+./test_app $TARGET
 
 echo "--- GOTOVO! PROVERI DMESG ---"
 echo "Cistim procese..."

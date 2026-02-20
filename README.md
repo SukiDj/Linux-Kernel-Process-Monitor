@@ -13,7 +13,7 @@ Projekat se oslanja na koncepte iz knjige Linux Kernel Development (Robert Love)
 
 2. Novi Sistemski Poziv:
 
-    *  Registrovan u syscall_64.tbl.
+    * Registrovan u syscall_64.tbl.
     * Implementiran u kernel/file_monitor.c koristeći SYSCALL_DEFINE1.
     * Omogućena bezbedna komunikacija user-kernel space-a preko strncpy_from_user.
 
@@ -64,9 +64,9 @@ sudo dmesg -c > /dev/null
 ## Testiranje
 Testiranje je izvršeno na oba načina pomoću automatizovanih skripti i namenskih aplikacija:
 
-* Za sistemski poziv: Napisana C aplikacija test_app.c koja poziva syscall i prosleđuje putanju.
+* Za sistemski poziv: Napisana C aplikacija test_app.c koja poziva syscall i prosleđuje putanju, a koju poziva skripta test_scenario.sh.
 
-* Za modul: Napisana Bash skripta test_scenario_modul.sh koja:
+* Za modul: Napisana skripta test_scenario_modul.sh koja:
 
     * Kreira test fajl.
     * Pokreće više pozadinskih procesa (tail, sleep) koji drže taj fajl otvorenim.

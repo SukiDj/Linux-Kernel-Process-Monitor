@@ -7,8 +7,8 @@
 
 #define __NR_sys_file_monitor 470
 
-int main() {
-    char *putanja = "/home/aleksandar-dj/test_syscall.txt";
+int main(int argc, char *argv[]) {
+    char *putanja = (argc > 1) ? argv[1] : "/home/aleksandar-dj/test_syscall.txt";
 
     long int status;
 
